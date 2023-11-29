@@ -16,6 +16,13 @@ jobs:
         with:
             ref: ${{ github.event.pull_request.head.sha }}
 
+      - name: Tailscale
+        uses: tailscale/github-action@v2
+        with:
+          oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
+          oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
+          tags: tag:ci
+
       - name: Scan files with kube-linter
         uses: stackrox/kube-linter-action@v1.0.4
         id: kube-linter-action-scan

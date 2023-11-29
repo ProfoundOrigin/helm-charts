@@ -9,7 +9,6 @@ on:
 
 jobs:
   scan:
-    runs-on: [self-hosted, charmander]
     env:
         DEEPSOURCE_DSN: ${{ secrets.DEEPSOURCE_DSN }}
     steps:

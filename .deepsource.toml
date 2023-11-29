@@ -1,8 +1,0 @@
-version = 1
-
-[[analyzers]]
-name = "secrets"
-
-[[analyzers]]
-name = "kube-linter"
-type = "community"

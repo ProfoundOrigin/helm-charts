@@ -24,5 +24,6 @@ jobs:
       - name: Scan files
         uses: yash-deepsource/community-analyzers-action@main
         with:
+          ref: ${{ github.action_ref }}
           analyzer: "kube-linter"
           deepsource-dsn: ${{ secrets.DEEPSOURCE_DSN }}

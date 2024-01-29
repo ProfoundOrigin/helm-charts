@@ -13,8 +13,3 @@ spec:
       command: ['wget']
       args: ['{{ include "runner.fullname" . }}:{{ .Values.service.port }}']
   restartPolicy: Never
-    - name: wget2
-      image: busybox
-      command: ['wget']
-      args: ['{{ include "runner.fullname" . }}:{{ .Values.service.port }}']
-  restartPolicy: Never

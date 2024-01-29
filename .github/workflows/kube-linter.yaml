@@ -25,3 +25,4 @@ jobs:
         uses: yash-deepsource/community-analyzers-action@main
         with:
           analyzer: "kube-linter"
+          deepsource-dsn: ${{ secrets.DEEPSOURCE_DSN }}
